@@ -69,7 +69,7 @@ suite('Unit Tests', function () {
     // #9
     test('#isBelow, #isAtLeast', function () {
       assert.isAtLeast('world'.length, 5);
-      assert.isAbove(2 * Math.random(), 0);
+      assert.isAtLeast(2 * Math.random(), 0); // 1
       assert.isBelow(5 % 2, 2);
       assert.isBelow(2 / 3, 1);
     });
@@ -152,7 +152,7 @@ suite('Unit Tests', function () {
       assert.typeOf(myCar, 'object');
       assert.typeOf(myCar.model, 'string');
       assert.notTypeOf(airlinePlane.wings, 'string');
-      assert.isArray(airlinePlane.engines, 'array');
+      assert.typeOf(airlinePlane.engines, 'array');
       assert.typeOf(myCar.wheels, 'number');
     });
     // #18
