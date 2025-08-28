@@ -5,7 +5,7 @@ suite('Unit Tests', function () {
   suite('Basic Assertions', function () {
     // #1
     test('#isNull, #isNotNull', function () {
-      assert.isNull(null, 'null is null');
+      assert.isNull(null, 'This is an optional error description - e.g. null is null');
       assert.isNotNull(1, '1 is not null');
     });
     // #2
@@ -75,8 +75,8 @@ suite('Unit Tests', function () {
     });
     // #10
     test('#approximately', function () {
-      assert.approximately(weirdNumbers(0.5), 1, 0.5); // actual, expected, delta
-      assert.approximately(weirdNumbers(0.2), 1, 0.8); // actual, expected, delta
+      assert.approximately(weirdNumbers(0.5), 1, 0.5);
+      assert.approximately(weirdNumbers(0.2), 1, 0.8);
     });
   });
 
@@ -124,15 +124,14 @@ suite('Unit Tests', function () {
 
   // -----------------------------------------------------------------------------
 
-  const Car = function () {  // constructor function
-    this.model = 'sedan'; //object property
+  const Car = function () {
+    this.model = 'sedan';
     this.engines = 1;
     this.wheels = 4;
   };
-  //These become properties of the object created with 'new'
 
   const Plane = function () {
-    this.model = '737';  
+    this.model = '737';
     this.engines = ['left', 'right'];
     this.wheels = 6;
     this.wings = 2;
